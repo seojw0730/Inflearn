@@ -1,4 +1,4 @@
-package Section2;
+package Section1;
 
 import java.util.*;
 
