@@ -1,4 +1,4 @@
-package Section6;
+package section6;
 
 import java.util.*;
 
