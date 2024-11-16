@@ -2,9 +2,9 @@ package section8;
 
 import java.util.*;
 
-class Point{
+class Point2{
 	int x, y;
-	public Point(int x, int y) {
+	public Point2(int x, int y) {
 		this.x=x;
 		this.y=y;
 	}
@@ -16,17 +16,17 @@ public class 미로의최단거리통로_BFS {
 	static int[][] map=new int[7][7], dist=new int[7][7];
 	
 	public void solution(int x, int y) {
-		Queue<Point> queue=new LinkedList<>();
-		queue.offer(new Point(x, y));
+		Queue<Point2> queue=new LinkedList<>();
+		queue.offer(new Point2(x, y));
 		map[x][y]=1;
 		while(!queue.isEmpty()) {
-			Point temp=queue.poll();
+			Point2 temp=queue.poll();
 			for(int i=0; i<4; i++) {
 				int nx=temp.x+dx[i];
 				int ny=temp.y+dy[i];
 				if(nx>-1 && nx<7 && ny>-1 && ny<7 && map[nx][ny]==0) {
 					map[nx][ny]=1;
-					queue.offer(new Point(nx, ny));
+					queue.offer(new Point2(nx, ny));
 					dist[nx][ny]=dist[temp.x][temp.y]+1;
 				}
 			}

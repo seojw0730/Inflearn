@@ -3,9 +3,9 @@ package section8;
 import java.util.*;
 import java.io.*;
 
-class Point2{
+class Point3{
 	int x, y;
-	public Point2(int x, int y) {
+	public Point3(int x, int y) {
 		this.x=x;
 		this.y=y;
 	}
@@ -15,17 +15,17 @@ public class 섬나라아일랜드_BFS {
 	static int n, answer=0;
 	static int[] dx= {0, 1, 1, 1, 0, -1, -1, -1};
 	static int[] dy= {1, 1, 0, -1, -1, -1, 0, 1};
-	Queue<Point2> queue=new LinkedList<>();
+	Queue<Point3> queue=new LinkedList<>();
 	public void BFS(int x, int y, int[][] map) {
-		queue.offer(new Point2(x, y));
+		queue.offer(new Point3(x, y));
 		while(!queue.isEmpty()) {
-			Point2 pos=queue.poll();
+			Point3 pos=queue.poll();
 			for(int i=0; i<8; i++) {
 				int nx=pos.x+dx[i];
 				int ny=pos.y+dy[i];
 				if(nx>-1 && nx<n && ny>-1 && ny<n && map[nx][ny]==1) {
 					map[nx][ny]=0;
-					queue.offer(new Point2(nx, ny));
+					queue.offer(new Point3(nx, ny));
 				}
 			}
 		}
