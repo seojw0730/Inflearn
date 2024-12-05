@@ -3,37 +3,37 @@ package section9;
 import java.util.*;
 import java.io.*;
 
-class Edge implements Comparable<Edge> {
+class Edge1 implements Comparable<Edge1> {
 	public int vex, cost; // 정점, 비용(가중치)
-	public Edge(int vex, int cost) {
+	public Edge1(int vex, int cost) {
 		this.vex=vex;
 		this.cost=cost;
 	}
 	
 	@Override
-	public int compareTo(Edge o) {
+	public int compareTo(Edge1 o) {
 		return this.cost-o.cost;
 	}
 }
 
 public class 다익스트라알고리즘 {
 	static int n, m;
-	static ArrayList<ArrayList<Edge>> graph;
+	static ArrayList<ArrayList<Edge1>> graph;
 	static int[] dist;
 	
 	public void solution(int v) {
-		PriorityQueue<Edge> queue=new PriorityQueue<>();
-		queue.offer(new Edge(v, 0));
+		PriorityQueue<Edge1> queue=new PriorityQueue<>();
+		queue.offer(new Edge1(v, 0));
 		dist[v]=0;
 		while(!queue.isEmpty()) {
-			Edge temp=queue.poll();
+			Edge1 temp=queue.poll();
 			int now=temp.vex;
 			int nowCost=temp.cost;
 			if(nowCost>dist[now]) continue;
-			for(Edge edge : graph.get(now)) {
+			for(Edge1 edge : graph.get(now)) {
 				if(dist[edge.vex]>nowCost+edge.cost) {
 					dist[edge.vex]=nowCost+edge.cost;
-					queue.offer(new Edge(edge.vex, nowCost+edge.cost));
+					queue.offer(new Edge1(edge.vex, nowCost+edge.cost));
 				}
 			}
 		}
@@ -56,7 +56,7 @@ public class 다익스트라알고리즘 {
 			int a=Integer.parseInt(temp2[0]);
 			int b=Integer.parseInt(temp2[1]);
 			int c=Integer.parseInt(temp2[2]);
-			graph.get(a).add(new Edge(b, c));
+			graph.get(a).add(new Edge1(b, c));
 		}
 		br.close();
 		new 다익스트라알고리즘().solution(1);
