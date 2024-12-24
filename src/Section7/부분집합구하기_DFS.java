@@ -1,6 +1,5 @@
 package section7;
 
-import java.util.*;
 import java.io.*;
 
 public class 부분집합구하기_DFS {

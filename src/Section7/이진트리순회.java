@@ -1,8 +1,5 @@
 package section7;
 
-import java.util.*;
-import java.io.*;
-
 class Node1{
 	int data;
 	Node1 lt, rt;

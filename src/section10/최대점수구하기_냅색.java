@@ -1,6 +1,5 @@
 package section10;
 
-import java.util.*;
 import java.io.*;
 
 public class 최대점수구하기_냅색 {

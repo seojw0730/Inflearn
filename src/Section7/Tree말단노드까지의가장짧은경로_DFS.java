@@ -1,7 +1,5 @@
 package section7;
 
-import java.util.*;
-
 class Node4{
 	int data;
 	Node4 lt, rt;

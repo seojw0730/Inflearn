@@ -1,6 +1,5 @@
 package section9;
 
-import java.util.*;
 import java.io.*;
 
 public class 친구인가 {

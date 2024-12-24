@@ -5,7 +5,7 @@ import java.util.*;
 public class 문장속단어 {
 	public String solution(String str) {
 		String answer = "";
-		String[] strArr = str.split(" ");
+//		String[] strArr = str.split(" ");
 		
 		int len = Integer.MIN_VALUE;
 		/*

@@ -1,6 +1,5 @@
 package section10;
 
-import java.util.*;
 import java.io.*;
 
 public class 계단오르기 {

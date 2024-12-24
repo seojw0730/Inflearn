@@ -1,7 +1,6 @@
 package section7;
 
 import java.io.*;
-import java.util.*;
 
 public class 피보나치 {
 	static int[] fibo;
